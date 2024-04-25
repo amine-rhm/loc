@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@700&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@tailwind components;
+@tailwind utilities;
+
+
+*,#root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+        }
+        
+        
+        .desc {
+            line-height: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3 ;
+}
+        
+
+        .cards:hover{
+            scale: 1.007; 
+        }
+
+        .title::after{
+            content: '';
+            position: absolute;
+            background-color: #f5520067;
+            height: 12px;
+            left: -5px;
+            right: -5px;
+            bottom: 0px;
+        }
+
+        .link::after{
+            content: '';
+            position: absolute;
+            border-left: 3px solid #edecf0;
+            height: 48px;
+           width: 12px;
+           bottom: -120%;
+           right: 15%;
+        }
+        @media (max-width: 989px ) {
+            .link::after{
+                content: '';
+                position: absolute;
+                border-top: 3px solid #edecf0;
+                border-left: none;
+                height: 48px;
+               width: 116px;
+               bottom: -29px;
+               left: 100%;
+            }
+        }
+        
+        
+
+@layer components{
+    .btn{
+        @apply cursor-pointer px-5 py-2 rounded-full border-none;
+    }
+    .input{
+        @apply bg-grey h-10 p-3 rounded-md outline-none border-transparent border-solid focus:border-greyActive;
+    }
+    .inputpub{
+        @apply bg-grey h-10 p-3 rounded-md outline-none border-transparent border-solid focus:border-greyActive text-base;
+    }
+    .icon{
+        @apply absolute left-2 top-[25%];
+    }
+}
+
